@@ -66,10 +66,23 @@ function Tasks({ isLoggedIn }) {
 
   return (
     <>
-      <div className="flex flex-col  mr-[80px] mt-[100px] md:justify-center ">
-        {userData.map((task, index) => (
-          <Card key={index} title={task.title} description={task.desc} dueDate={task.dueDate} status={task.status} removeFromScreen={removeFromScreen}/>
-        ))}
+      <div className="flex flex-col mr-[80px] mt-[100px] md:justify-center">
+        {userData.length === 0 ? (
+          <div className="text-center mt-10">
+            <h2 className="text-2xl font-semibold">No pending tasks</h2>
+          </div>
+        ) : (
+          userData.map((task, index) => (
+            <Card
+              key={index}
+              title={task.title}
+              description={task.desc}
+              dueDate={task.dueDate}
+              status={task.status}
+              removeFromScreen={removeFromScreen}
+            />
+          ))
+        )}
       </div>
     </>
   );
