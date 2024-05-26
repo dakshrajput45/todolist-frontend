@@ -6,7 +6,8 @@ import { toast } from "react-hot-toast"
 import axios from "axios";
 
 
-const  url = "http://localhost:5000";
+
+const  url = "https://todolist-backend-jhgg.onrender.com";
 function Signup({ isLoggedIn,setIsLoggedIn }) {
 
   const navigate = useNavigate();

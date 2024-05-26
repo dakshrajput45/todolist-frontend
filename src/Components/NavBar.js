@@ -48,9 +48,7 @@ function DrawerAppBar(props) {
       <Divider />
       <List>
           <ListItem  disablePadding>
-            <ListItemButton onClick={() => {
-                navigate("/tasks");
-              }} sx={{ textAlign: "center" }}>
+            <ListItemButton onClick={taskClickHandler} sx={{ textAlign: "center" }}>
               <ListItemText primary={"Tasks"} />
             </ListItemButton>
           </ListItem>

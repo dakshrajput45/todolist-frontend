@@ -10,7 +10,8 @@ import { toast } from "react-hot-toast"
 import axios from "axios";
 
 
-const url = "http://localhost:5000";
+
+const  url = "https://todolist-backend-jhgg.onrender.com";
 function Card({ title, description, status, dueDate, removeFromScreen }) {
     const [cookies, setCookie, removeCookie] = useCookies(['user']);
     const userId = cookies.userId;

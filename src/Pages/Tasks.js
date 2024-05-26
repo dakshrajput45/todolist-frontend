@@ -6,8 +6,8 @@ import { useCookies } from "react-cookie";
 import toast from "react-hot-toast";
 
 
-const  url = "http://localhost:5000";
 
+const  url = "https://todolist-backend-jhgg.onrender.com";
 
 
 function Tasks({ isLoggedIn }) {

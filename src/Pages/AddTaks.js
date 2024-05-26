@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 
 
-const  url = "http://localhost:5000";
+const  url = "https://todolist-backend-jhgg.onrender.com";
 function AddTask({ isLoggedIn }) {
 
   const navigate = useNavigate();
