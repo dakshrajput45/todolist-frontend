@@ -16,7 +16,7 @@ function Tasks({ isLoggedIn }) {
     if (!isLoggedIn) {
       navigate('/');
     }
-  }, [isLoggedIn]);
+  }, [isLoggedIn,navigate]);
 
   const [userData, setUserData] = useState([]);
   const [cookies, setCookie, removeCookie] = useCookies(['user'])
@@ -44,15 +44,11 @@ function Tasks({ isLoggedIn }) {
             dueDate: formattedDueDate
         };
     });
-    
-    // Now, newDataWithUSDateFormat contains tasks with due dates in US format
-    console.log(newDateFormat);
       setUserData(newDateFormat);
     } catch (error) {
       toast.error("An error occurred while fetching user data");
     }
 };
-
   useEffect(() => {
     getUserData();
   }, []);
